@@ -10,18 +10,21 @@ namespace Lab1Implementera
     {
         static void Main(string[] args)
         {
+            //Singelton
             Register r = Register.GetRegister();
             r.singeltonRegister();
 
-
+            //Adapter
             Fuel fuels = new Fuel();
             IFuel thisfuel = new Fuels(fuels);
+            Console.WriteLine(fuels.GetFuelRequest());
 
             Console.WriteLine(thisfuel.GetFuel());
 
-
-
+            //Observer
             var subject = new AdressAdder();
+            var observer = new Observer();
+            subject.Register(observer);
             subject.AdressName();
 
 

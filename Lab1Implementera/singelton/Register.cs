@@ -35,7 +35,7 @@ namespace Lab1Implementera
 
             foreach (Person p in people)
             {
-                Console.WriteLine($"FirstName is {p.FirstName} and Lastname is {p.LastName}");
+                Console.WriteLine($"FirstName is {p.FirstName} and Lastname is {p.LastName}\n");
 
             }
         }

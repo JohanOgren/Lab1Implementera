@@ -13,7 +13,7 @@ namespace Lab1Implementera.adapter
     {
         public string GetFuelRequest()
         {
-            return "This Vehicle Uses GasFuel";
+            return "This Vehicle Uses GasFuel\n";
         }
     }
     public class Fuels : IFuel
@@ -25,7 +25,7 @@ namespace Lab1Implementera.adapter
         }
         public string GetFuel()
         {
-            return $"This is a adapter for my fuel request";
+            return $"This is a adapting GasFuelRequest\n";
         }
     }
 }
