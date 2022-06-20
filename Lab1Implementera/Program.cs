@@ -19,6 +19,12 @@ namespace Lab1Implementera
 
             Console.WriteLine(thisfuel.GetFuel());
 
+
+
+            var subject = new AdressAdder();
+            subject.AdressName();
+
+
             Console.WriteLine("The End..");
             Console.ReadKey();
         }
