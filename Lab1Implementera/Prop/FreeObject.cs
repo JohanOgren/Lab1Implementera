@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab1Implementera.Contract
+namespace Lab1Implementera.Prop
 {
-    public interface ISubject
+    public class FreeObject
     {
-        void Register(IObserver observer);
-
-        void Notify();
+        public string FreeObjectName { get; set; }
     }
 }

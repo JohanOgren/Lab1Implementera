@@ -10,6 +10,5 @@ namespace Lab1Implementera.Functionality
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-
     }
 }

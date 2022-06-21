@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab1Implementera.adapter
-{ //Adapter
-    public class Fuel 
+namespace Lab1Implementera.strategy
+{ //Strategy
+    public class Subtraction : IMath
     {
-        public int GetFuelRequest()
+        public int Calculate(int val1, int val2)
         {
-            return 220;
+            return val1 - val2;
         }
     }
 }

@@ -6,9 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Lab1Implementera.adapter
-{/// <summary>
- /// Adapter använder vi här.
- /// </summary>
+{ //Adapter
     public class AdapterFuel : IFuel
         {
             private readonly Fuel _fuel;
@@ -23,7 +21,7 @@ namespace Lab1Implementera.adapter
             System.Threading.Thread.Sleep(1000);
             Console.WriteLine("Boop..");
             System.Threading.Thread.Sleep(1000);
-            return $"Now that vehicle uses electricity instead because of my adapter design\n";
+            return $"Now that vehicle uses electricity instead because of my adapter design\nand it can run {_fuel.GetFuelRequest()} miles";
             }
         }
 }

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab1Implementera.Prop
+namespace Lab1Implementera.Contract
 {
-    public class Adress
+    public interface IMath
     {
-        public string AdressName { get; set; }
+        int Calculate(int val1, int val2);
     }
 }

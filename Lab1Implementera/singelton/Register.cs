@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace Lab1Implementera
 {//Singelton använder vi här.
-    public sealed class Register 
+    public sealed class Register
     {
         private Register()
-        { 
+        {
         }
         private static Register _register;
         public static Register GetRegister()
