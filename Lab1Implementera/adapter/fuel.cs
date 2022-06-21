@@ -6,26 +6,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Lab1Implementera.adapter
-{/// <summary>
-/// Adapter använder vi här.
-/// </summary>
+{
     public class Fuel 
     {
-        public string GetFuelRequest()
+        public static string GetFuelRequest()
         {
-            return "This Vehicle Uses GasFuel\n";
-        }
-    }
-    public class Fuels : IFuel
-    {
-        private readonly Fuel _fuel;
-        public Fuels( Fuel fuel)
-        {
-            _fuel = fuel;
-        }
-        public string GetFuel()
-        {
-            return $"This is a adapting GasFuelRequest\n";
+            return "imagine you have a vehicle that uses fuel\n";
         }
     }
 }

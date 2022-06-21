@@ -22,20 +22,21 @@ namespace Lab1Implementera
             }
             return _register;
         }
-        public void singeltonRegister()
+        public static void SingeltonRegister()
         {
             Console.WriteLine("Input FirstName");
             var firstName = Console.ReadLine();
             Console.WriteLine("Input LastName");
             var lastName = Console.ReadLine();
 
-            List<Person> people = new List<Person>();
+            List<Person> people = new();
 
             people.Add(new Person() { FirstName = firstName, LastName = lastName });
 
             foreach (Person p in people)
             {
-                Console.WriteLine($"FirstName is {p.FirstName} and Lastname is {p.LastName}\n");
+                Console.WriteLine($"FirstName is {p.FirstName} and Lastname is {p.LastName}\n" +
+                    $"this is done with Singelton");
 
             }
         }

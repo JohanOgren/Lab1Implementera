@@ -10,16 +10,16 @@ namespace Lab1Implementera
 {/// <summary>
 /// Observer <----------------
 /// </summary>
-    public class AdressAdder : ISubject
+    public class ObserverAdress : ISubject
     {
-        public int state { get; set; } = -0;
+        public int State { get; set; } = -0;
         private List<IObserver> _observer = new List<IObserver>();
 
         public void Notify()
         {
 
             System.Threading.Thread.Sleep(2000);
-            Console.WriteLine("\n Notifying all observers....with Observer pattern;D \n");
+            Console.WriteLine("\n Notifying observer....with Observer pattern \n");
             foreach (var o in _observer)
             {
                 o.Update(this);
@@ -28,13 +28,13 @@ namespace Lab1Implementera
 
         public void Register(IObserver observer)
         {
-            Console.WriteLine($" \n Subject: Added Observer.");
+            Console.WriteLine($" \nSubject: adding Observer to your object.");
             _observer.Add(observer);
         }
 
         public void AdressName()
         {
-            Console.WriteLine("\n Hello, Enter anything");
+            Console.WriteLine("\nWhat kind of thing would you like to add to that object? Use your imagination.. ");
             var adres = Console.ReadLine();
 
             List<Adress> adresses = new List<Adress>();
@@ -47,16 +47,6 @@ namespace Lab1Implementera
             Notify();
 
 
-        }
-    }
-    class Observer : IObserver
-    {
-        public void Update(ISubject subject)
-        {
-            if ((subject as AdressAdder).state < 3)
-            {
-                Console.WriteLine("What every you wrote is now updated because of Observer Design");
-            }
         }
     }
 }

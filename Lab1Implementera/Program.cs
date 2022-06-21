@@ -1,8 +1,6 @@
 ﻿using Lab1Implementera.adapter;
 using Lab1Implementera.Contract;
-using Lab1Implementera.Functionality;
 using System;
-using System.Collections.Generic;
 
 namespace Lab1Implementera
 {
@@ -10,26 +8,54 @@ namespace Lab1Implementera
     {
         static void Main(string[] args)
         {
-            //Singelton
-            Register r = Register.GetRegister();
-            r.singeltonRegister();
+            
+            var starter = true;
+            while (starter == true)
+            {
+                Console.WriteLine("Press\n1 for Singelton \n2 for Adapter \n3 for Observer\n4 to exit");
+                var meny = int.Parse(Console.ReadLine());
+                switch (meny)
+                {
+                    
+                    case 1:
+                        //Singelton
+                        Register r = Register.GetRegister();
+                        Register.SingeltonRegister();
+                        Console.WriteLine("Press anything to return to menu");
+                        Console.ReadKey();
+                        Console.Clear();
+                        break;
 
-            //Adapter
-            Fuel fuels = new Fuel();
-            IFuel thisfuel = new Fuels(fuels);
-            Console.WriteLine(fuels.GetFuelRequest());
+                    case 2:
+                        //Adapter
+                        Fuel fuels = new();
+                        IFuel thisfuel = new AdapterFuel(fuels);
+                        Console.WriteLine(Fuel.GetFuelRequest());
 
-            Console.WriteLine(thisfuel.GetFuel());
+                        Console.WriteLine(thisfuel.GetFuel());
+                        Console.WriteLine("Press anything to return to menu");
+                        Console.ReadKey();
+                        Console.Clear();
+                        break;
+                    case 3:
+                        //Observer
+                        var subject = new ObserverAdress();
+                        var observer = new Observer();
+                        subject.Register(observer);
+                        subject.AdressName();
+                        Console.WriteLine("Press anything to return to menu");
+                        Console.ReadKey();
+                        Console.Clear();
+                        break;
 
-            //Observer
-            var subject = new AdressAdder();
-            var observer = new Observer();
-            subject.Register(observer);
-            subject.AdressName();
 
-
-            Console.WriteLine("The End..");
-            Console.ReadKey();
+                    default:
+                    case 4:
+                        
+                        starter = false;
+                        break;
+                }
+            }
         }
     }
 }
