@@ -1,2 +1,2 @@
 # Lab1Implementera
-This litle application is made in pure purpose of implementing 3 diffrent kind of Design patterns as Singleton, Adapter and Strategy
+This little application is made in pure purpose of implementing 3 different kind of Design patterns as Singleton, Adapter and Strategy
