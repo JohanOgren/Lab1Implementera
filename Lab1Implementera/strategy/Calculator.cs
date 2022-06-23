@@ -9,7 +9,7 @@ namespace Lab1Implementera.strategy
 { //Strategy
     class Calculator
     {
-        private IMath _imath;
+        private readonly IMath _imath;
         public Calculator(IMath math)
         {
             _imath = math;

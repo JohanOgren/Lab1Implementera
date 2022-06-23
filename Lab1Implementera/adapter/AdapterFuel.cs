@@ -21,7 +21,8 @@ namespace Lab1Implementera.adapter
             System.Threading.Thread.Sleep(1000);
             Console.WriteLine("Boop..");
             System.Threading.Thread.Sleep(1000);
-            return $"Now that vehicle uses electricity instead because of my adapter design\nand it can run {_fuel.GetFuelRequest()} miles";
+            return $"Now that vehicle uses electricity instead because of " +
+                $"my adapter design\nand it can run {Fuel.GetFuelRequest()} miles";
             }
         }
 }

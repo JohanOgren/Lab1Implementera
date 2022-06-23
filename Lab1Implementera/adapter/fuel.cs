@@ -9,7 +9,7 @@ namespace Lab1Implementera.adapter
 { //Adapter
     public class Fuel 
     {
-        public int GetFuelRequest()
+        public static int GetFuelRequest()
         {
             return 220;
         }
